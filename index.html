@@ -8,6 +8,13 @@
 <body>
 <label>
         <input type="text" value="Text in here..." name="myTextBox"/>
+        <input type="submit" value="Click Me!" name="mySubmit" onclick="divPrint()"/>
 </label>
+<div id="outputSentence"></div>
+<script>
+       function divPrint () {
+               document.getElementById('outputSentence').innerHTML = 'And now out here!';
+       }
+</script>
 </body>
 </html>
