@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="stylesheet.css"/>
         <title>
                 Jeff Berhow's github.io
         </title>
 </head>
 <body>
 <label>
-        <input type="text" value="Text in here..." name="myTextBox"/>
+        <p><i>Type your name here, please:</i></p>
+        <input type="text" placeholder="Please type in here..." name="myTextBox"/><br/><br/>
         <input type="submit" value="Click Me!" name="mySubmit" onclick="divPrint()"/>
 </label>
 <div id="outputSentence"></div>
 <script>
        function divPrint () {
-               document.getElementById('outputSentence').innerHTML = 'And now out here!';
+           var box = document.getElementsByName('myTextBox')[0];
+           document.getElementById('outputSentence').innerHTML = '<br/>' + box.value;
        }
 </script>
 </body>
